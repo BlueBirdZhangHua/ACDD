@@ -25,5 +25,5 @@
  *
  */
 
-include ':ACDDLauncher'
+include ':ACDDLauncher', ':testapplication'
 include ':ACDDCore'
