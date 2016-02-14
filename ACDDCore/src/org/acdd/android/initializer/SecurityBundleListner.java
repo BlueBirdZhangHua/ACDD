@@ -70,17 +70,17 @@ public class SecurityBundleListner implements BundleListener {
                     File bundleFile = ACDD.getInstance().getBundleFile(location);
                     if (bundleFile != null&&!TextUtils.isEmpty(SecurityBundleListner.PUBLIC_KEY)) {
                         String  bKey=ApkUtils.getApkPublicKey(bundleFile.getAbsolutePath());
-                        if (!SecurityBundleListner.PUBLIC_KEY.equals(bKey)) {
-                            Log.e("SecurityBundleListner", "Security check failed. " + location+" "+bKey);
-                            new Handler(Looper.getMainLooper()).post(new Runnable() {
-                                @Override
-                                public void run() {
-                                    Toast.makeText(RuntimeVariables.androidApplication, "Public Key error，PLZ update your  public key", Toast.LENGTH_SHORT).show();
-                                    mProcessHandler.sendEmptyMessageDelayed(0, 5000);
-                                }
-                            });
-
-                        }
+//                        if (!SecurityBundleListner.PUBLIC_KEY.equals(bKey)) {
+//                            Log.e("SecurityBundleListner", "Security check failed. " + location+" "+bKey);
+//                            new Handler(Looper.getMainLooper()).post(new Runnable() {
+//                                @Override
+//                                public void run() {
+//                                    Toast.makeText(RuntimeVariables.androidApplication, "Public Key error，PLZ update your  public key", Toast.LENGTH_SHORT).show();
+//                                    mProcessHandler.sendEmptyMessageDelayed(0, 5000);
+//                                }
+//                            });
+//
+//                        }
 
                     }
                 }

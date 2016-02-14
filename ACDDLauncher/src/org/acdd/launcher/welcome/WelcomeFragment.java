@@ -228,7 +228,7 @@ public class WelcomeFragment extends Fragment implements Callback {
         if (getActivity()!=null&&LauncherActivity.class==getActivity().getClass() ) {
 
         	Intent mIntent=new Intent();
-    		mIntent.setClassName(getActivity(), "com.acdd.homelauncher.MainActivity");
+    		mIntent.setClassName(getActivity(), "com.synthia.testapplication.MainActivity");
             mIntent.putExtra("aa",new AA());
             startActivity(mIntent);
             LauncherActivity.doLaunchoverUT();
